@@ -1,0 +1,51 @@
+.payment-options-container {
+    margin-top: 20px;
+}
+
+.add-option-form {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.options-list {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+#logo-preview {
+    margin-top: 10px;
+}
+
+#logo-preview img {
+    max-width: 150px;
+    max-height: 100px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.upload-logo-btn {
+    margin-left: 10px;
+}
+
+.edit-option,
+.delete-option {
+    margin-right: 5px;
+}
+
+.delete-option {
+    color: #a00;
+}
+
+.delete-option:hover {
+    color: #dc3232;
+    border-color: #dc3232;
+}
+
+.cancel-edit {
+    margin-left: 10px;
+}

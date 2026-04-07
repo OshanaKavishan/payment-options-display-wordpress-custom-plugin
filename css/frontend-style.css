@@ -1,0 +1,202 @@
+/* ==============================
+   GRID – ALWAYS 2 COLUMNS
+============================== */
+.pod-payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 100%; /* 🔥 REMOVED RESTRICTIVE max-width */
+}
+
+/* ==============================
+   PAYMENT CARD (FLEXIBLE HEIGHT)
+============================== */
+.pod-payment-box {
+    position: relative;
+    border: 1px solid #1c75bc;
+    border-radius: 6px;
+    padding: 12px 8px 10px;
+    background: #fff;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 🔥 CENTER CONTENT */
+    gap: 6px;
+
+    box-sizing: border-box;
+
+    /* 🔥 FLEXIBLE HEIGHT */
+    min-height: 120px;
+    height: auto;
+}
+
+/* ==============================
+   HOVER
+============================== */
+.pod-payment-box:hover {
+    border-color: #0b5aa6;
+    box-shadow: 0 3px 10px rgba(28, 117, 188, 0.18);
+}
+
+/* ==============================
+   DISCOUNT BADGE – FLAT STYLE (LARGER)
+============================== */
+.pod-discount-badge {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    background: #ff6a00;
+    color: #fff;
+    font-size: 11px; /* 🔥 INCREASED from 10px */
+    font-weight: 700;
+    padding: 5px 14px; /* 🔥 INCREASED from 4px 10px */
+    border-radius: 4px; /* 🔥 FLATTER (was 12px) */
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    margin-bottom: 4px;
+    display: inline-block;
+    animation: pod-blink 1.2s infinite;
+}
+
+/* Blink animation */
+@keyframes pod-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.35; }
+    100% { opacity: 1; }
+}
+
+/* ==============================
+   PAYMENT NAME
+============================== */
+.pod-payment-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/* ==============================
+   LOGO AREA (NO OVERLAP)
+============================== */
+.pod-payment-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    min-height: 35px; /* 🔥 CONSISTENT LOGO HEIGHT */
+}
+
+.pod-payment-logo img {
+    max-height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* ==============================
+   PRICE
+============================== */
+.pod-payment-price {
+    font-size: 15px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.2;
+}
+
+/* ==============================
+   INSTALLMENT TEXT
+============================== */
+.pod-payment-plan {
+    font-size: 9px;
+    color: #555;
+    background: #f2f4f7;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ==============================
+   WOOCOMMERCE PRICE FIX
+============================== */
+.pod-payment-price .woocommerce-Price-amount {
+    font-weight: 800;
+}
+
+.pod-payment-plan .woocommerce-Price-amount {
+    font-weight: 600;
+}
+
+/* ==============================
+   MOBILE – STILL 2 COLUMNS
+============================== */
+@media (max-width: 768px) {
+    .pod-payment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .pod-payment-box {
+        min-height: 110px;
+        padding: 10px 6px 8px;
+    }
+
+    .pod-payment-name {
+        font-size: 10px;
+    }
+
+    .pod-payment-price {
+        font-size: 13px;
+    }
+
+    .pod-payment-plan {
+        font-size: 8.5px;
+    }
+
+    .pod-payment-logo {
+        min-height: 30px;
+    }
+
+    .pod-payment-logo img {
+        max-height: 35px;
+    }
+
+    .pod-discount-badge {
+        font-size: 10px; /* 🔥 SLIGHTLY SMALLER on mobile */
+        padding: 4px 12px;
+    }
+}
+
+/* ==============================
+   EXTRA SMALL MOBILE
+============================== */
+@media (max-width: 360px) {
+    .pod-payment-box {
+        min-height: 105px;
+        padding: 8px 5px 6px;
+    }
+
+    .pod-payment-name {
+        font-size: 9px;
+    }
+
+    .pod-payment-price {
+        font-size: 12px;
+    }
+
+    .pod-payment-plan {
+        font-size: 8px;
+    }
+
+    .pod-discount-badge {
+        font-size: 9px;
+        padding: 4px 10px;
+    }
+}
