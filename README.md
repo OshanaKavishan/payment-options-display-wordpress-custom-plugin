@@ -20,9 +20,6 @@ A custom WordPress plugin that dynamically displays various **payment options** 
 - JavaScript
 - CSS
 
-## 📸 Screenshots
-
-![Payment Options Display](screenshots/view.png)
 
 
 
